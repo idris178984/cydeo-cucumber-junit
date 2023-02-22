@@ -8,6 +8,7 @@ import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.Keys;
 
 public class Order_StepDefinitions {
 
@@ -35,7 +36,22 @@ public class Order_StepDefinitions {
 
     }
     @When("user enters quantity {int}")
-    public void user_enters_quantity(Integer int1) {
+    public void user_enters_quantity(Integer quantity) {
+
+
+        //accepting int argument and sending it using sendKeys() method
+        //since sendKeys() method only accepts String, we need to either concat with ""
+        //or send String.valueOf(int);
+        //orderPage.inputQuantity.sendKeys(String.valueOf(quantity));
+
+        //clear() method will delete whatever is in the input box
+        orderPage.inputQuantity.clear();
+
+        //imitating pressing back_space button from keyboard to delete existing input
+        orderPage.inputQuantity.sendKeys(Keys.BACK_SPACE);
+
+        orderPage.inputQuantity.sendKeys(quantity+"");
+
 
     }
     @When("user enters customer name {string}")
