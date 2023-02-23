@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class OrderPage {
+public class OrderPage extends BasePage{
 
 
     public OrderPage(){
@@ -46,5 +46,17 @@ public class OrderPage {
 
     @FindBy(css = "button[type='submit']")
     public WebElement processOrderBtn;
+
+    @FindBy(css = "section[class$='section']")
+    public WebElement sectionMakeOrderProductInformation;
+
+    @FindBy(css = "section[class$='section']")
+    public WebElement sectionMakeOrderProductInformation2;
+
+    @FindBy(xpath = "//section")
+    public WebElement sectionMakeOrderProductInformation3;
+
+    @FindBy(xpath = "//section")
+    public WebElement sectionMakeOrderProductInformation4;
 
 }
