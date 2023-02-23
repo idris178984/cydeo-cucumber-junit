@@ -19,6 +19,7 @@ Scenario: Wikipedia Search Functionality Title Verification
 
 
 
+    @wiki
     @scenarioOutline
   Scenario Outline: Wikipedia Search Functionality Title Verification
     Given User is on Wikipedia home page
