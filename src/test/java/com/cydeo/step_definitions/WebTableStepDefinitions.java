@@ -7,6 +7,7 @@ import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.Keys;
 
 import java.util.Map;
 
@@ -41,9 +42,9 @@ public class WebTableStepDefinitions {
     }
 
     @When("user enters username {string} password {string} and logins")
-    public void userEntersUsernamePasswordAndLogins(String username, String pw) {
+    public void userEntersUsernamePasswordAndLogins(String username,String pw) {
 
-        webTableLoginPage.login(username,pw);
+        webTableLoginPage.loginWithConfig();
 
     }
 
@@ -55,7 +56,7 @@ public class WebTableStepDefinitions {
 //        webTableLoginPage.loginButton.click();
 
         //we can call our login utility method and pass values from map
-        webTableLoginPage.login(credentials.get("username"), credentials.get("password"));
+        webTableLoginPage.login(credentials.get("username"), credentials.get("password"));//todo 3:49
 
     }
 }
