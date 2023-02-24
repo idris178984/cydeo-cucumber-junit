@@ -91,14 +91,16 @@ public class BrowserUtils {
      * @return List<String> actualOptionsAsString
      */
     public static List<String> dropdownOptionsAsString(WebElement dropdownElement){
-        Select select = new Select(dropdownElement);
+        Select select = new Select(dropdownElement);//TODO DAY17 3:04
 
         //List of all ACTUAL month <options> as a web element
-        List<WebElement> actualOptionsAsWebElement = select.getOptions();
 
-        //List of all ACTUAL month <options> as a string
+        List<WebElement> actualOptionsAsWebElement = select.getOptions();
+//Web element pass to String...
+
         List<String> actualOptionsAsString= new ArrayList<>();
 
+        //List of all ACTUAL month <options> as a string
         for (WebElement each : actualOptionsAsWebElement) {
             actualOptionsAsString.add(each.getText());
         }
