@@ -27,5 +27,17 @@ public class BasePage {
     @FindBy(xpath = "//button[.='Logout']")
     public WebElement logoutButton;
 
+    @FindBy(xpath = "//input[@name='cardNo']")
+    public WebElement inputCard;
+
+    @FindBy(xpath = "//input[@name='cardNo']")
+    public WebElement inputCard2;
+
+    @FindBy(xpath = "//input[@name='cardExp']")
+    public WebElement inputCardExp;
+
+    @FindBy(xpath = "//input[@name='cardExp']")
+    public WebElement inputCardExp2;
+
 
 }
